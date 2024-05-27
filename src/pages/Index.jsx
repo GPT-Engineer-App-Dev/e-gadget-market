@@ -1,5 +1,5 @@
-import { Box, Container, Flex, Heading, Text, VStack, Image, SimpleGrid, Link, HStack, IconButton } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Box, Container, Flex, Heading, Text, VStack, Image, SimpleGrid, Link, HStack, IconButton, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaInstagram, FaSearch } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -13,6 +13,16 @@ const Index = () => {
           <Link href="#">About Us</Link>
           <Link href="#">Contact</Link>
         </HStack>
+      <InputGroup maxW="300px" ml={4}>
+          <Input placeholder="Search for products..." />
+          <InputRightElement>
+            <IconButton
+              aria-label="Search"
+              icon={<FaSearch />}
+              onClick={() => console.log("Search functionality to be implemented")}
+            />
+          </InputRightElement>
+        </InputGroup>
       </Flex>
 
       {/* Hero Section */}
